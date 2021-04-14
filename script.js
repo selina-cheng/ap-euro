@@ -119,19 +119,21 @@ function themeOutput(theme) {
 }
 
 // to hide and show answers
-var questions=document.getElementsByClassName('learno');  
 
-function toggleAnswer(){
-  var answer=document.getElementsByClassName('histd'); 
-  for (var i = 0; i < answer.length; i++) {
-    answer[i].classList.toggle("show");
-};
-
-for (var i = 0; i < questions.length; i++) {
-    questions[i].addEventListener("click", toggleAnswer);
+function toggleAnswer(a){
+  var answer = document.getElementsByClassName('histd');
+  if (a == "show"){
+    console.log('yes');
+    for (var i=0; i < answer.length; i++){
+      answer[i].style.visibility='visible';
+    }
+  } else if (a == "hide"){
+      console.log('no');
+      for (var i=0; i < answer.length; i++){
+      answer[i].style.visibility='hidden';
+    }
   }
 }
-
 
 // for notes page (changes image to respective notes)
 function changeImage(topic) {
