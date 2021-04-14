@@ -124,7 +124,7 @@ var questions=document.getElementsByClassName('learno');
 function toggleAnswer(){
   var answer=document.getElementsByClassName('histd'); 
   for (var i = 0; i < answer.length; i++) {
-    answer.classList.toggle("show");
+    answer[i].classList.toggle("show");
 };
 
 for (var i = 0; i < questions.length; i++) {
