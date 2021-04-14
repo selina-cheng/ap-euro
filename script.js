@@ -1,3 +1,140 @@
+// for review (by theme)
+// to change table text to chosen theme
+function themeOutput(theme) {
+  var tbody = document.getElementById('tbody');
+  tbody.innerHTML = "";
+  switch(theme) {
+    case "CID":
+      document.getElementById('theme').innerHTML = "Cultural and Intellectual Developments (CID)";
+      for (var i = 0; i < CID.length; i++) {
+        var tr = "<tr>";
+          tr+= '<td class="topic">' + CID[i]["TOPIC"] + '</td>';
+          tr+= '<td>' + CID[i]["LESSON"] + '</td>';
+          tr+= '<td class="learno">' + CID[i]["LO"] + '</td>';
+            var a = CID[i]["HD"].split('\n-');
+          tr+= '<td class="histd">' + a.join("<br><br>" + "-") + '</td>';
+            var b = CID[i]["EX"].split('\n');
+          tr+= '<td>' + b.join("<br>") + '</td>';
+          tr+= '</tr>';
+        tbody.innerHTML += tr;
+      }
+      break;
+      
+    case "INT":
+      document.getElementById('theme').innerHTML = "Interaction Between Europe of the World (INT)";
+      for (var i = 0; i < INT.length; i++) {
+        var tr = "<tr>";
+          tr+= '<td class="topic">' + INT[i]["TOPIC"] + '</td>';
+          tr+= '<td>' + INT[i]["LESSON"] + '</td>';
+          tr+= '<td class="learno">' + INT[i]["LO"] + '</td>';
+            var a = INT[i]["HD"].split('\n-');
+          tr+= '<td class="histd">' + a.join("<br>" + "-") + '</td>';
+            var b = INT[i]["EX"].split('\n');
+          tr+= '<td>' + b.join("<br>") + '</td>';
+          tr+= '</tr>';
+        tbody.innerHTML += tr;
+      }
+      break;
+      
+    case "SOP":
+      document.getElementById('theme').innerHTML = "States and Other Institutions of Power (SOP)";
+      for (var i = 0; i < SOP.length; i++) {
+        var tr = "<tr>";
+          tr+= '<td class="topic">' + SOP[i]["TOPIC"] + '</td>';
+          tr+= '<td>' + SOP[i]["LESSON"] + '</td>';
+          tr+= '<td class="learno">' + SOP[i]["LO"] + '</td>';
+            var a = SOP[i]["HD"].split('\n-');
+          tr+= '<td class="histd">' + a.join("<br>" + "-") + '</td>';
+            var b = SOP[i]["EX"].split('\n');
+          tr+= '<td>' + b.join("<br>") + '</td>';
+          tr+= '</tr>';
+        tbody.innerHTML += tr;
+        }
+      break;
+      
+    case "ECD":
+      document.getElementById('theme').innerHTML = "Economic and Commercial Developments (ECD)";
+      for (var i = 0; i < ECD.length; i++) {
+        var tr = "<tr>";
+          tr+= '<td class="topic">' + ECD[i]["TOPIC"] + '</td>';
+          tr+= '<td>' + ECD[i]["LESSON"] + '</td>';
+          tr+= '<td class="learno">' + ECD[i]["LO"] + '</td>';
+            var a = ECD[i]["HD"].split('\n-');
+          tr+= '<td> class="histd"' + a.join("<br>" + "-") + '</td>';
+            var b = ECD[i]["EX"].split('\n');
+          tr+= '<td>' + b.join("<br>") + '</td>';
+          tr+= '</tr>';
+        tbody.innerHTML += tr;
+        }
+      break;
+      
+    case "SCD":
+      document.getElementById('theme').innerHTML = "Social Organization and Development (SCD)";
+      for (var i = 0; i < SCD.length; i++) {
+        var tr = "<tr>";
+          tr+= '<td class="topic">' + SCD[i]["TOPIC"] + '</td>';
+          tr+= '<td>' + SCD[i]["LESSON"] + '</td>';
+          tr+= '<td class="learno">' + SCD[i]["LO"] + '</td>';
+            var a = SCD[i]["HD"].split('\n-');
+          tr+= '<td class="histd">' + a.join("<br>" + "-") + '</td>';
+            var b = SCD[i]["EX"].split('\n');
+          tr+= '<td>' + b.join("<br>") + '</td>';
+          tr+= '</tr>';
+        tbody.innerHTML += tr;
+        }
+      break;
+      
+    case "NEI":
+      document.getElementById('theme').innerHTML = "National and European Identity (NEI)";
+      for (var i = 0; i < NEI.length; i++) {
+        var tr = "<tr>";
+          tr+= '<td class="topic">' + NEI[i]["TOPIC"] + '</td>';
+          tr+= '<td>' + NEI[i]["LESSON"] + '</td>';
+          tr+= '<td class="learno">' + NEI[i]["LO"] + '</td>';
+            var a = NEI[i]["HD"].split('\n-');
+          tr+= '<td class="histd">' + a.join("<br>" + "-") + '</td>';
+            var b = NEI[i]["EX"].split('\n');
+          tr+= '<td>' + b.join("<br>") + '</td>';
+          tr+= '</tr>';
+        tbody.innerHTML += tr;
+        }
+      break;
+    
+    case "TSI":
+      document.getElementById('theme').innerHTML = "Technological and Scientific Innovation (TSI)";
+      for (var i = 0; i < TSI.length; i++) {
+        var tr = "<tr>";
+          tr+= '<td class="topic">' + TSI[i]["TOPIC"] + '</td>';
+          tr+= '<td>' + TSI[i]["LESSON"] + '</td>';
+          tr+= '<td class="learno">' + TSI[i]["LO"] + '</td>';
+            var a = TSI[i]["HD"].split('\n-');
+          tr+= '<td class="histd">' + a.join("<br>" + "-") + '</td>';
+            var b = TSI[i]["EX"].split('\n');
+          tr+= '<td>' + b.join("<br>") + '</td>';
+          tr+= '</tr>';
+        tbody.innerHTML += tr;
+        }
+      break;
+  }
+}
+
+// to hide and show answers
+function toggleAnswer(a){
+  var answer = document.getElementsByClassName('histd');
+  if (a == "show"){
+    console.log('yes');
+    for (var i=0; i < answer.length; i++){
+      answer[i].style.visibility='visible';
+    }
+  } else if (a == "hide"){
+      console.log('no');
+      for (var i=0; i < answer.length; i++){
+      answer[i].style.visibility='hidden';
+    }
+  }
+}
+
+// for notes page (changes image to respective notes)
 function changeImage(topic) {
   switch (topic) {
     case "ir2":

@@ -1,15 +1,23 @@
 body {
-  background-color: #131313;
+  background-color: #211e1d;
   color: #ffffff;
-  font-family: 'helvetica', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   margin: 0px;
   padding: 0px;
 }
 
 h1 {
   font-family: 'Roboto', sans-serif;
-  font-style: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   color: #ffffff;
+  margin: 20px;
+}
+
+h2 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 10px 20px;
 }
 
 img {
@@ -24,10 +32,10 @@ img {
 
 ul {
   list-style-type: none;
-  margin: 10px;
+  margin: 0px;
   padding: 0;
   overflow: hidden;
-  background-color: 131313;
+  background-color: #211e1d;
 }
 
 li {
@@ -87,4 +95,63 @@ li.dropdown {
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+.themes {
+  padding: 10px 0 10px;
+  background-color: #363434;
+  display: flex; 
+  align-items: center;
+}
+
+.themebar {
+  margin: 0 20px;
+}
+
+.themes button, .header-flex button {
+  background-color: #211e1d;
+  border: none;
+  margin: 5px;
+}
+
+table {
+  font-size: 16px;
+  border-spacing: 20px;
+  margin: 10px 20px;
+}
+
+th {
+  text-align: left;
+  background-color: #363434;
+  padding: 20px 20px;
+}
+
+tbody {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.topic {
+  text-align: right;
+}
+
+.learno {
+  padding: 20px;
+  background-color: #363434;
+  border-radius: 4px;
+}
+
+.histd {
+  visibility: hidden;
+}
+
+.table-flex {
+  align-items: center;
+  justify-items: center;
+}
+
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-items: right;
 }

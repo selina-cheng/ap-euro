@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>apppp euroooo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <script src="const.js"></script>
+  </head>
+
+  <h1>themes across history</h1>
+  <ul>
+    <div class="themes">
+      <div class="themebar">
+        <li>
+          <button onclick="themeOutput('CID')">CID</button>
+          <button onclick="themeOutput('INT')">INT</button>
+          <button onclick="themeOutput('NEI')">NEI</button>
+          <button onclick="themeOutput('SCD')">SCD</button>
+          <button onclick="themeOutput('SOP')">SOP</button>
+          <button onclick="themeOutput('TSI')">TSI</button>
+      </li>
+      </div>
+    </div>
+  </ul>
+    
+  <div class="header-flex">
+    <h2 id="theme">click a theme above</h2>
+    <ul>
+      <li><button onclick="toggleAnswer('show')">SHOW</button></li>
+      <li><button onclick="toggleAnswer('hide')">HIDE</button></li>
+    </ul>
+  </div>
+  
+  <table id="theme-table">
+    <thead>
+        <th>TOPIC</th>
+        <th style="width:50px">LESSON</th>
+        <th style="width:200px">LEARNING OBJECTIVE</th>
+        <th>HISTORICAL DEVELOPMENT</th>
+        <th style="width:200px">EXAMPLE</th>
+    </thead>
+    <tbody id="tbody">
+    </tbody>
+   
+  </table>
+    
+</html>
