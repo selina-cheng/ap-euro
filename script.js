@@ -119,6 +119,7 @@ function themeOutput(theme) {
 }
 
 // to hide and show answers
+
 function toggleAnswer(a){
   var answer = document.getElementsByClassName('histd');
   if (a == "show"){
